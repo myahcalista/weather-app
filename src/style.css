@@ -1,0 +1,146 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+  color: #1d2425;
+  display: block;
+  font-size: 24px;
+
+  line-height: 20px;
+  margin: 20px 0;
+}
+
+h2 {
+  color: #2c373a;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  font-weight: 500;
+}
+
+ul,
+current-condition {
+  margin: 20 0;
+  padding: 0;
+}
+
+li {
+  color: #2c373a;
+  font-size: 16px;
+  font-weight: 100;
+  height: 19px;
+  list-style: none;
+  line-height: 1px;
+}
+
+#current-condition {
+  text-transform: capitalize;
+}
+hr {
+  border: 1px solid #71697a;
+  stroke-linecap: round;
+}
+
+input[type="search"] {
+  padding: 5px 15px;
+  border: 1px none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+input[type="submit"] {
+  padding: 5px 15px;
+  background: #c1d7c6;
+  color: white;
+  border: 1px none;
+  cursor: pointer;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  transition: all 100ms ease-in-out;
+}
+
+input[type="submit"]:hover {
+  padding: 5px 15px;
+  background: white;
+  color: #c1d7c6;
+  border: 1px none;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  box-shadow: #c1d7c6 2px 4px 1px;
+}
+a {
+  color: #8fb799;
+  transition: all 100ms ease-in-out;
+}
+
+a:hover {
+  color: #71697a;
+}
+
+.conditions {
+  margin-top: 10px;
+}
+
+.current-group {
+  margin-top: 20px;
+}
+
+.btn {
+  background-color: #80a1c1;
+  border: 3px;
+}
+
+.weather-app {
+  border: 3px solid #71697a;
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 600px;
+  border-radius: 8px;
+  background-image: linear-gradient(to top, #eeeeec 31%, #efeeec 75%);
+}
+
+.current-temp {
+  color: #1d2425;
+  font-size: 64px;
+  font-weight: 400;
+  line-height: 1;
+  margin-left: 10px;
+}
+
+.current-icon {
+  font-size: 55px;
+  margin-right: 10px;
+  color: #7699d4;
+}
+
+.measurement {
+  position: relative;
+  top: -34px;
+  color: #1d2425;
+}
+
+.search-bar {
+  margin-bottom: 35px;
+}
+.location-container {
+  border-radius: 5px;
+  margin: auto;
+  padding: 10px;
+  border: #e4be9e 2px 2px;
+  text-align: center;
+}
+
+.fas {
+  color: #7699d4;
+  font-size: 30px;
+  text-align: center;
+  transition: all 250ms ease-in-out;
+}
+.fas:hover {
+  color: #e4be9e;
+}
+.footer {
+  text-align: right;
+  font-size: 8pt;
+}
