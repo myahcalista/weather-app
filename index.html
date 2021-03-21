@@ -49,17 +49,22 @@
           <strong></strong>
         </h1>
         <ul class="current-condition">
-          <li id="current-date"></li>
+          <li>Last updated: <span id="current-date"></span></li>
           <li id="current-condition"></li>
         </ul>
         <div class="row">
           <div class="col-6">
-            <i class="far fa-snowflake current-icon" alt="Snowflake icon"></i>
-            <span class="current-temp" id="current-temp">2</span>
-            <span class="measurement">
-              <a href="" id="celcius-change">°C</a> |
-              <a href="" id="farenheit-change">°F</a></span
-            >
+            <div class="clearfix">
+              <i
+                class="far fa-snowflake current-icon float-left"
+                alt="Snowflake icon"
+              ></i>
+              <span class="current-temp" id="current-temp"></span
+              ><span class="measurement float-left"
+                ><a href="" class="float-left" id="celcius-change">°C</a> |
+                <a href="" class="float-left" id="farenheit-change">°F</a></span
+              >
+            </div>
           </div>
           <div class="col-6">
             <div class="conditions">
@@ -135,7 +140,7 @@
           </div>
           <div class="col-2 location-container">
             <h2>
-              <strong> </strong>
+              <strong> Sat</strong>
               <br />
               2°C
             </h2>
