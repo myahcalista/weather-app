@@ -34,9 +34,10 @@ li {
   line-height: 1px;
 }
 
-#current-condition {
+li::first-letter {
   text-transform: capitalize;
 }
+
 hr {
   border: 1px solid #71697a;
   stroke-linecap: round;
