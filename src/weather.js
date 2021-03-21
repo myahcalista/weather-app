@@ -1,5 +1,7 @@
 // Week 4 – feature 1
-function formatDate(date) {
+function formatDate(timestamp) {
+  let date = new Date(timestamp);
+
   let dateIndex = date.getDate();
   let hours = date.getHours();
   if (hours < 10) {
@@ -35,13 +37,13 @@ function formatDate(date) {
     "12",
   ];
   let month = months[date.getMonth()];
-  return `${hours}:${minutes}, ${day}, ${dateIndex}/${month}`;
+  return `${hours}:${minutes}, ${day} ${dateIndex}/${month}`;
 }
 
-let currentTime = new Date();
+// let currentTime = new Date();
 
-let currentDate = document.querySelector("#current-date");
-currentDate.innerHTML = formatDate(currentTime);
+// let currentDate = document.querySelector("#current-date");
+// currentDate.innerHTML = formatDate(currentTime);
 
 // //week 5 Feature 1
 function showCurrentLocationTempreture(response) {
@@ -61,6 +63,9 @@ function showCurrentLocationTempreture(response) {
   );
   document.querySelector(`#current-condition`).innerHTML =
     response.data.weather[0].description;
+  document.querySelector(`#current-date`).innerHTML = formatDate(
+    response.data.dt * 1000
+  );
 }
 // navigator.geolocation.getCurrentPosition(findPosition);
 
