@@ -47,7 +47,6 @@ function formatDate(timestamp) {
 
 // //week 5 Feature 1
 function showCurrentLocationTempreture(response) {
-  console.log(response.data);
   document.querySelector(`#current-location`).innerHTML = response.data.name;
   document.querySelector(`#current-temp`).innerHTML = Math.round(
     response.data.main.temp
@@ -66,8 +65,14 @@ function showCurrentLocationTempreture(response) {
   document.querySelector(`#current-date`).innerHTML = formatDate(
     response.data.dt * 1000
   );
+  let currentIcon = document.querySelector(`#current-icon`);
+
+  currentIcon.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
+  currentIcon.setAttribute("alt", response.data.weather[0].description);
 }
-// navigator.geolocation.getCurrentPosition(findPosition);
 
 //week 4 feature 2, & week 5 feature 1
 
