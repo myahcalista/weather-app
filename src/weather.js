@@ -47,10 +47,10 @@ function formatDate(timestamp) {
 
 // //week 5 Feature 1
 function showCurrentLocationTempreture(response) {
+  let currentIcon = document.querySelector(`#current-icon`);
+  let celcius = response.data.main.temp;
   document.querySelector(`#current-location`).innerHTML = response.data.name;
-  document.querySelector(`#current-temp`).innerHTML = Math.round(
-    response.data.main.temp
-  );
+  document.querySelector(`#current-temp`).innerHTML = Math.round(celcius);
 
   document.querySelector(`#current-condition`).innerHTML =
     response.data.weather[0].description;
@@ -65,7 +65,6 @@ function showCurrentLocationTempreture(response) {
   document.querySelector(`#current-date`).innerHTML = formatDate(
     response.data.dt * 1000
   );
-  let currentIcon = document.querySelector(`#current-icon`);
 
   currentIcon.setAttribute(
     "src",
@@ -101,22 +100,24 @@ function switchMetricF(event) {
   let farenheitChange = document.querySelector(".current-temp");
   let currentTemp = farenheitChange.innerHTML;
   currentTemp = Number(currentTemp);
-  farenheitChange.innerHTML = Math.round((currentTemp * 9) / 5 + 32);
+  farenheitChange.innerHTML = Math.round((celcius * 9) / 5 + 32);
 }
 
 let farenheit = document.querySelector("#farenheit-change");
 farenheit.addEventListener("click", switchMetricF);
 
-function switchMetricC(event) {
-  event.preventDefault();
-  let celciusChange = document.querySelector(".current-temp");
-  let currentTemp = celciusChange.innerHTML;
-  currentTemp = Number(currentTemp);
-  celciusChange.innerHTML = Math.round(((currentTemp - 32) * 5) / 9);
-}
+let celcius = null;
 
-let celcius = document.querySelector("#celcius-change");
-celcius.addEventListener("click", switchMetricC);
+// function switchMetricC(event) {
+//   event.preventDefault();
+//   let celciusChange = document.querySelector(".current-temp");
+//   let currentTemp = celciusChange.innerHTML;
+//   currentTemp = Number(currentTemp);
+//   celciusChange.innerHTML = Math.round(((currentTemp - 32) * 5) / 9);
+// }
+
+// let celcius = document.querySelector("#celcius-change");
+// celcius.addEventListener("click", switchMetricC);
 
 function searchLocation(position) {
   let lon = position.coords.longitude;
