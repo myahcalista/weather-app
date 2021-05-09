@@ -47,7 +47,6 @@ function formatDate(timestamp) {
 
 // //week 5 Feature 1
 function showCurrentLocationTempreture(response) {
-  let currentIcon = document.querySelector(`#current-icon`);
   let celcius = response.data.main.temp;
   document.querySelector(`#current-location`).innerHTML = response.data.name;
   document.querySelector(`#current-temp`).innerHTML = Math.round(celcius);
@@ -65,12 +64,12 @@ function showCurrentLocationTempreture(response) {
   document.querySelector(`#current-date`).innerHTML = formatDate(
     response.data.dt * 1000
   );
+  let iconElement = document.querySelector(`#icon`);
 
-  currentIcon.setAttribute(
+  iconElement.setAttribute(
     "src",
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
-  currentIcon.setAttribute("alt", response.data.weather[0].description);
 }
 
 //week 4 feature 2, & week 5 feature 1

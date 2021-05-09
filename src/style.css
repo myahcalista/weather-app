@@ -34,10 +34,9 @@ li {
   line-height: 1px;
 }
 
-li::first-letter {
+#current-condition {
   text-transform: capitalize;
 }
-
 hr {
   border: 1px solid #71697a;
   stroke-linecap: round;
@@ -108,8 +107,11 @@ a:hover {
   line-height: 1;
   margin-left: 10px;
 }
-
-.current-icon {
+.weather-temperature {
+  margin-right: 10px;
+  float: left;
+}
+.icon {
   font-size: 55px;
   margin-right: 10px;
   color: #7699d4;
