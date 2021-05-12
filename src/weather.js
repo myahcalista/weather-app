@@ -107,17 +107,6 @@ farenheit.addEventListener("click", switchMetricF);
 
 let celcius = null;
 
-// function switchMetricC(event) {
-//   event.preventDefault();
-//   let celciusChange = document.querySelector(".current-temp");
-//   let currentTemp = celciusChange.innerHTML;
-//   currentTemp = Number(currentTemp);
-//   celciusChange.innerHTML = Math.round(((currentTemp - 32) * 5) / 9);
-// }
-
-// let celcius = document.querySelector("#celcius-change");
-// celcius.addEventListener("click", switchMetricC);
-
 function searchLocation(position) {
   let lon = position.coords.longitude;
   let lat = position.coords.latitude;
