@@ -122,4 +122,4 @@ function findCurrentLocation(event) {
 let currentLocationButton = document.querySelector(`#current-location-button`);
 currentLocationButton.addEventListener("click", findCurrentLocation);
 
-searchCity("Paphos");
+searchCity("Pissouri");
