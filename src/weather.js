@@ -40,10 +40,36 @@ function formatDate(timestamp) {
   return `${hours}:${minutes}, ${day} ${dateIndex}/${month}`;
 }
 
-// let currentTime = new Date();
+function displayForecast() {
+  let forecastElement = document.querySelector(`#forecast`);
+  let forecastHTML = `<div class="row">`;
+  let days = ["Mon", "Tues", "Weds", "Fri", "Thurs", "Sat", "Sun"];
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `<div class="col-2 location-container">
+      <div class="forecast-day">
+        <strong>${day}</strong>
+      </div>
 
-// let currentDate = document.querySelector("#current-date");
-// currentDate.innerHTML = formatDate(currentTime);
+      <div class="weather-forecast-temperatures">
+        <span class="forecast-max"> 18° </span>
+        <span class="forecast-min"> 12° </span>
+      </div>
+
+   
+        <img
+          src="http://openweathermap.org/img/wn/50d@2x.png"
+          alt=""
+          width="42"
+        />
+        <hr />
+      
+    </div>`;
+  });
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
 
 // //week 5 Feature 1
 function showCurrentLocationTempreture(response) {
@@ -123,3 +149,5 @@ let currentLocationButton = document.querySelector(`#current-location-button`);
 currentLocationButton.addEventListener("click", findCurrentLocation);
 
 searchCity("Pissouri");
+
+displayForecast();

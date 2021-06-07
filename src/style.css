@@ -11,10 +11,22 @@ h1 {
   margin: 20px 0;
 }
 
-h2 {
+.forecast-day {
   color: #2c373a;
   font-size: 16px;
-  font-weight: 400;
+  line-height: 20px;
+  font-weight: 10000;
+}
+.forecast-min {
+  color: #2c373a;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 500;
+  opacity: 50%;
+}
+.forecast-max {
+  color: #2c373a;
+  font-size: 16px;
   line-height: 20px;
   font-weight: 500;
 }
@@ -106,12 +118,13 @@ a:hover {
   font-weight: 400;
   line-height: 1;
   margin-left: 10px;
+  margin-right: 5px;
 }
 .weather-temperature {
   margin-right: 10px;
   float: left;
 }
-.icon {
+.current-icon {
   height: 86px;
   width: 86px;
   font-size: 86px;
