@@ -40,27 +40,39 @@ function formatDate(timestamp) {
   return `${hours}:${minutes}, ${day} ${dateIndex}/${month}`;
 }
 
+function formatDay(timestamp) {
+  let date = new Date(timestamp * 1000);
+  let day = date.getDay();
+  let days = ["Sun", "Mon", "Tues", "Weds", "Thurs", "Fri", "Sat"];
+
+  return days[day];
+}
+
 function displayForecast(response) {
   let forecast = response.data.daily;
+
   let forecastElement = document.querySelector(`#forecast`);
+
   let forecastHTML = `<div class="row">`;
-  let days = ["Tues", "Weds", "Fri", "Thurs", "Sat", "Sun"];
+
   forecast.forEach(function (forecastDay) {
     forecastHTML =
       forecastHTML +
       `<div class="col-2 location-container">
       <div class="forecast-day">
-        <strong>${forecastDay.dt}</strong>
+        <strong>${formatDay(forecastDay.dt)}</strong>
       </div>
 
       <div class="weather-forecast-temperatures">
-        <span class="forecast-max"> ${forecastDay.temp.max}° </span>
-        <span class="forecast-min"> ${forecastDay.temp.min}° </span>
+        <span class="forecast-max"> ${Math.round(forecastDay.temp.max)}° </span>
+        <span class="forecast-min"> ${Math.round(forecastDay.temp.min)}° </span>
       </div>
 
    
         <img
-          src="http://openweathermap.org/img/wn/${forecastDay.weather[0].icon}@2x.png"
+          src="http://openweathermap.org/img/wn/${
+            forecastDay.weather[0].icon
+          }@2x.png"
           alt=""
           width="42"
         />
