@@ -12,15 +12,7 @@ function formatDate(timestamp) {
     minutes = `0${minutes}`;
   }
 
-  let days = [
-    "Sunday",
-    "Monday",
-    "Tuesday",
-    "Wednesday",
-    "Thursday",
-    "Friday",
-    "Saturday",
-  ];
+  let days = ["Sun", "Mon", "Tues", "Weds", "Thurs", "Fri", "Sat"];
   let day = days[date.getDay()];
   let months = [
     "01",
@@ -108,6 +100,8 @@ function showCurrentLocationTempreture(response) {
   document.querySelector(`#wind-speed`).innerHTML = Math.round(
     response.data.wind.speed
   );
+  // document.querySelector("");
+
   document.querySelector(`#current-condition`).innerHTML =
     response.data.weather[0].description;
   document.querySelector(`#current-date`).innerHTML = formatDate(

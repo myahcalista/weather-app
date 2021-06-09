@@ -3,29 +3,30 @@ body {
 }
 
 h1 {
-  color: #71697a;
+  font-family: "Courier New", Courier, monospace;
+  color: #084255;
   display: block;
-  font-size: 24px;
+  font-size: 40px;
 
   line-height: 20px;
   margin: 20px 0;
 }
 
 .forecast-day {
-  color: #71697a;
+  color: #084255;
   font-size: 16px;
   line-height: 20px;
   font-weight: 10000;
 }
 .forecast-min {
-  color: #71697a;
+  color: #084255;
   font-size: 16px;
   line-height: 20px;
   font-weight: 500;
   opacity: 50%;
 }
 .forecast-max {
-  color: #71697a;
+  color: #084255;
   font-size: 16px;
   line-height: 20px;
   font-weight: 500;
@@ -38,7 +39,7 @@ current-condition {
 }
 
 li {
-  color: #2c373a;
+  color: #084255;
   font-size: 16px;
   font-weight: 100;
   height: 19px;
@@ -50,7 +51,7 @@ li {
   text-transform: capitalize;
 }
 hr {
-  border: 1px solid #71697a;
+  border: 1px solid #084255;
   stroke-linecap: round;
 }
 
@@ -59,6 +60,7 @@ input[type="search"] {
   border: 1px none;
   cursor: pointer;
   border-radius: 5px;
+  color: #084255;
 }
 
 input[type="submit"] {
@@ -87,7 +89,7 @@ a {
 }
 
 a:hover {
-  color: #71697a;
+  color: #084255;
 }
 
 .conditions {
@@ -104,7 +106,7 @@ a:hover {
 }
 
 .weather-app {
-  border: 3px solid #71697a;
+  border: 3px solid #084255;
   padding: 20px;
   margin: 20px auto;
   max-width: 600px;
@@ -114,7 +116,7 @@ a:hover {
 }
 
 .current-temp {
-  color: #71697a;
+  color: #084255;
   font-size: 64px;
   font-weight: 400;
   line-height: 1;
@@ -147,8 +149,9 @@ a:hover {
 .footer {
   text-align: right;
   font-size: 8pt;
+  color: #084255;
 }
 
 .weather-app:hover {
-  color: #e4be9e;
+  box-shadow: 30px 30px 0px #084255;
 }
