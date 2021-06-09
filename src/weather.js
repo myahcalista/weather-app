@@ -133,7 +133,6 @@ function searchCity(city) {
 }
 
 function handleSubmit(event) {
-  debugger;
   event.preventDefault();
   let city = document.querySelector("#search-city-input").value;
 
@@ -144,19 +143,6 @@ let currentLocation = document.querySelector(".search-bar");
 currentLocation.addEventListener("submit", handleSubmit);
 
 //week 4 bonus feature
-
-function switchMetricF(event) {
-  event.preventDefault();
-  let farenheitChange = document.querySelector(".current-temp");
-  let currentTemp = farenheitChange.innerHTML;
-  currentTemp = Number(currentTemp);
-  farenheitChange.innerHTML = Math.round((celcius * 9) / 5 + 32);
-}
-
-let farenheit = document.querySelector("#farenheit-change");
-farenheit.addEventListener("click", switchMetricF);
-
-let celcius = null;
 
 function searchLocation(position) {
   let lon = position.coords.longitude;
